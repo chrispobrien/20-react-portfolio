@@ -6,9 +6,9 @@ function App() {
 
   const [page, setPage] = useState('home');
 
-  useEffect(() => {
-    console.log(page);
-  }, [page])
+  // useEffect(() => {
+  //   console.log(page);
+  // }, [page])
 
   return (
     <div className="App">

@@ -15,7 +15,17 @@
 
 .my-card {
   width: 18rem;
-  height: 20rem;
+  height: 24rem;
+  align-self:center;
+}
+
+.row {
+  align-items:center;
+}
+
+.col {
+  width: 18rem;
+  height: 18rem;
 }
 
 .my-card-text {
@@ -28,6 +38,12 @@
 
 .my-card-button {
   clear: both;
+}
+
+#aboutMeText {
+  text-align:left;
+  font-size: 20px;
+  margin:20px 10px 30px 50px;
 }
 
 .App {
@@ -51,7 +67,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
 }
