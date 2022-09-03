@@ -106,7 +106,7 @@ function Header({ page, setPage}) {
     return (
         <>
         <Navigation page={page} setPage={setPage} tags={tags} />
-        <Image className="jumbo" src="/assets/images/banner.jpg" />
+        <Image className="jumbo" src={`./assets/images/banner.jpg`} />
         {page.includes('work') || page.includes('home') ? <>
         <Container fluid>
             <Row className="align-items-center">
