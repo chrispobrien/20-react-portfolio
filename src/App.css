@@ -23,7 +23,7 @@
   align-items:center;
 }
 
-.col {
+.project {
   width: 18rem;
   height: 18rem;
 }
@@ -44,6 +44,10 @@
   text-align:left;
   font-size: 20px;
   margin:20px 10px 30px 50px;
+}
+
+#contactMeNav {
+  clear:both;
 }
 
 .App {
