@@ -7,14 +7,24 @@ function App() {
 
   const [page, setPage] = useState('about');
 
-  // useEffect(() => {
-  //   console.log(page);
-  // }, [page])
+  // Load page from sessionStorage to account for page refresh or back from deployed or gitbub links
+  useEffect(() => {
+    const storedPage = sessionStorage.getItem('page');
+    if (storedPage) {
+      setPage(storedPage);
+    };
+  }, []);
+
+  // Save page selected to sessionStorage
+  const handlePage = function(newPage) {
+    setPage(newPage);
+    sessionStorage.setItem('page', newPage);
+  }
 
   return (
     <div className="App">
       <header className="App-header" width="100%">
-        <Header page={page} setPage={setPage} />
+        <Header page={page} handlePage={handlePage} />
         <Footer />
       </header>
     </div>

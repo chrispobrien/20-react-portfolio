@@ -5,11 +5,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
 
-function Navigation({ page, setPage , tags}) {
+function Navigation({ page, handlePage , tags}) {
 
     const handleClick = function(event) {
         console.log(event.target.href);
-        setPage(event.target.href.split('#')[1]);
+        handlePage(event.target.href.split('#')[1]);
     }
 
     return (

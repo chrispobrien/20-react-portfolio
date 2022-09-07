@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
@@ -8,7 +8,7 @@ import Navigation from './Navigation';
 import Project from './Project';
 import projects from '../data/projects';
 
-function Header({ page, setPage}) {
+function Header({ page, handlePage}) {
 
     // Add all tags into array, may contain duplicates
     const allTags = projects.reduce((accum, item) => {
@@ -105,8 +105,9 @@ function Header({ page, setPage}) {
 
     return (
         <>
-        <Navigation page={page} setPage={setPage} tags={tags} />
-        <Image className="jumbo" src={`./assets/images/banner.jpg`} />
+        <Navigation page={page} handlePage={handlePage} tags={tags} />
+        <Image className="jumbo" src={require('../assets/images/banner.jpg')} />
+
         {page.includes('work') || page.includes('home') ? <>
         <Container fluid>
             <Row className="align-items-center">
@@ -118,6 +119,7 @@ function Header({ page, setPage}) {
             </Row>
         </Container>
         </> : null}
+
         {page.includes('about') ? <>
         <div className="badge">About Me</div>
         <section id="aboutMeText">
@@ -132,6 +134,7 @@ function Header({ page, setPage}) {
 
     </section>
         </> : null }
+
         {page.includes('contact') ? <>
         <div className="badge">Contact Me</div>
         <section id="contactMeForm">
@@ -153,6 +156,7 @@ function Header({ page, setPage}) {
                 <div className="text-danger">{errorMessage}</div>
         </section>
         </> : null}
+
         {page.includes('resume') ? <>
         <div className="badge">Resume</div>
         <section>

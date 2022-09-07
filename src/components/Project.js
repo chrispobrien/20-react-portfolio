@@ -25,7 +25,7 @@ function Project({ project }) {
                 <Card.Link href={github}><Button>Github</Button></Card.Link>
                 </div>
             </Card.ImgOverlay>
-            <Card.Img variant="bottom" src={`./assets/images/${week}.png`} />
+            <Card.Img variant="bottom" src={require(`../assets/images/${week}.png`)} />
         </Card>
         </>
       );

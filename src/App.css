@@ -26,6 +26,8 @@
 .project {
   width: 18rem;
   height: 18rem;
+  margin-top: 2px;
+  
 }
 
 .my-card-text {
