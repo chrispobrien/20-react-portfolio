@@ -103,6 +103,23 @@ const projects = [
         deployed: 'https://agile-bastion-33942.herokuapp.com/',
         github: 'https://github.com/chrispobrien/19-budget-radium'
     },
+    {
+        week: 20,
+        tags: ['JS','Express','React'],
+        name: 'Portfolio',
+        description: 'React Portfolio',
+        deployed: 'https://chrispobrien.github.io/20-react-portfolio/',
+        github: 'https://github.com/chrispobrien/20-react-portfolio'
+    },
+    {
+        week: 24,
+        tags: ['JS','MERN','MongoDB','Express','React'],
+        name: 'Recipe App',
+        description: 'React client/server recipe app',
+        deployed: 'https://young-shelf-43673.herokuapp.com/',
+        github: 'https://github.com/travisramcharran/recipe-gen'
+
+    }
 ];
 
 export default projects;
